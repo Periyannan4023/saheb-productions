@@ -2,19 +2,61 @@ let currentSection = 0;
 const sections = document.querySelectorAll('.section');
 const numSections = sections.length;
 
+let scrollThreshold = 200; // Adjust this value to control sensitivity
+let accumulatedScroll = 0;
+
+// Variables to handle touch events
+let startY = 0;
+let currentY = 0;
+
 window.addEventListener('wheel', (event) => {
-    if (event.deltaY > 0) {
-        // Scrolling down
-        if (currentSection < numSections - 1) {
-            currentSection++;
+    accumulatedScroll += event.deltaY;
+    
+    if (Math.abs(accumulatedScroll) >= scrollThreshold) {
+        if (accumulatedScroll > 0) {
+            // Scrolling down
+            if (currentSection < numSections - 1) {
+                currentSection++;
+            }
+        } else {
+            // Scrolling up
+            if (currentSection > 0) {
+                currentSection--;
+            }
         }
-    } else {
-        // Scrolling up
-        if (currentSection > 0) {
-            currentSection--;
-        }
+        accumulatedScroll = 0; // Reset the accumulated scroll
+        scrollToSection();
     }
-    scrollToSection();
+});
+
+window.addEventListener('touchstart', (event) => {
+    startY = event.touches[0].clientY;
+});
+
+window.addEventListener('touchmove', (event) => {
+    currentY = event.touches[0].clientY;
+    accumulatedScroll += startY - currentY;
+    startY = currentY;
+
+    if (Math.abs(accumulatedScroll) >= scrollThreshold) {
+        if (accumulatedScroll > 0) {
+            // Scrolling down
+            if (currentSection < numSections - 1) {
+                currentSection++;
+            }
+        } else {
+            // Scrolling up
+            if (currentSection > 0) {
+                currentSection--;
+            }
+        }
+        accumulatedScroll = 0; // Reset the accumulated scroll
+        scrollToSection();
+    }
+});
+
+window.addEventListener('touchend', () => {
+    accumulatedScroll = 0; // Reset the accumulated scroll when touch ends
 });
 
 function scrollToSection() {
@@ -29,6 +71,7 @@ function scrollToSection() {
 
 // Initialize by showing the home section
 scrollToSection();
+
 
 /////////////////////////////
 document.addEventListener('DOMContentLoaded', () => {
