@@ -780,3 +780,24 @@ background-repeat: no-repeat;
   font-size: 14px;
   color: #878787;
 }
+
+/*********Responsive**********************/
+@media(max-width:599px){
+  .about-cont img{
+    width: 90%;
+  }
+  .box-design-about .services-section-about{
+        display: block;
+        min-width: auto;
+  }
+  .box-design-about .services-section-about .card {
+   
+    margin: 100px 10px 15px 25px;
+    }
+    .cont-sec-box {
+      margin: 5%;
+    }
+    .last-content{
+      margin: 0!important;
+    }
+}
