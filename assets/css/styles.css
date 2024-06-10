@@ -59,8 +59,8 @@ h1, h2, h3, h4, h5, h6, p, div, span{
     opacity: 0;
     visibility: hidden;
     scroll-behavior: smooth;
-    transition-delay: 5s;
-    transition: opacity 2s ease, visibility 1s ease !important;
+    transition-delay: 2s;
+    transition: opacity 1s ease, visibility 1s ease !important;
 }
 .main-home .split-section{
      height: 100vh;
@@ -70,8 +70,8 @@ h1, h2, h3, h4, h5, h6, p, div, span{
     text-align: center;
     opacity: 0;
     scroll-behavior: smooth;
-    transition-delay: 50s;
-    transition: opacity 85s ease;
+    transition-delay: 10s;
+    transition: opacity 15s ease;
 }
 .section {
     width: 100vw; 
@@ -86,8 +86,8 @@ h1, h2, h3, h4, h5, h6, p, div, span{
     opacity: 0;
     visibility: hidden;
     scroll-behavior: smooth;
-    transition-delay: 5s;
-    transition: opacity 2s ease, visibility 1s ease;
+    transition-delay: 3s;
+    transition: opacity 1s ease, visibility 1s ease;
 }
 
 .section.active {
@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6, p, div, span{
     text-align: center;
     scroll-behavior: smooth;
     opacity: 0;
-    transition: opacity 5s ease;
+    transition: opacity 2s ease;
 }
 
 .section video {
@@ -689,4 +689,48 @@ hr {
     background-size: cover;
 }
 /**********************************/
+/**********Responsive code************************/
+@media(max-width:599px){
+    #section1 img{
+        width: 100%;
+    }
+    .con-sec-2 .page2-btn {
+    display: block;
+    width: 80%;
+    }
+    .con-sec-2 .page2-btn button{
+    margin: 2%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    }
+    #section4{
+    overflow: scroll;
+    height: 100vh;
+    margin-top: 5%;
+    }
+    .gallery-work{
+    padding-top: 500%;
+    margin-top: 25%;
+    margin-bottom: 20%;
+    }
+    #section4 h1{
+    position: absolute;
+    z-index: 2;
+    margin-bottom: 210%;
+    }
+    .logos {
+    display: flex;
+    gap: 50px;
+    justify-items: center;
+    flex-direction: column;
+    }
+    #section5 h2 {
+    margin-top: -190%;
+    }
+    .logo-sec {
+    padding-top: 370%;
+    }
 
+}
