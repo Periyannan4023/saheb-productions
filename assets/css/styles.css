@@ -711,7 +711,7 @@ hr {
     margin-top: 5%;
     }
     .gallery-work{
-    padding-top: 500%;
+    padding-top: 320%;
     margin-top: 25%;
     margin-bottom: 20%;
     }
@@ -726,11 +726,39 @@ hr {
     justify-items: center;
     flex-direction: column;
     }
-    #section5 h2 {
-    margin-top: -190%;
+    
+    #section5{
+        overflow: scroll;
+    }
+        #section5 h2 {
+        position: absolute;
+        margin-top: -10%;
+        z-index: 5;
     }
     .logo-sec {
-    padding-top: 370%;
+    padding-top: 410%;
+    }
+    .client-hover figure {
+    margin-top: 5%;
+    position: relative;
+    }
+        .direct-contact-container, .form-horizontal {
+        width: 90%;
+    }
+    .alt-send-button{
+        width: 200px;
+    }
+    .direct-contact-container{
+        max-width: 100%;
+    }
+    .direct-contact-container .contact-text{
+        font-size: 25px;
+    }
+    .section-scroll{
+        display: block;
+    }
+    .left{
+            height: 8vh;
     }
 
 }
