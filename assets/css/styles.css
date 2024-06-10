@@ -181,7 +181,7 @@ p {
 #section5 h2{
     font-size: 65px;
     font-weight: 800;
-    margin-top: -190% !important;
+    margin-top: 3%;
 }
 #section4 h1 {
     font-size: 65px;
@@ -730,10 +730,11 @@ hr {
     #section5{
         overflow: scroll;
     }
-        #section5 h2 {
+
+    #section5 h2 {
         position: absolute;
-        margin-top: -10%;
         z-index: 5;
+        margin-top: -190% !important;
     }
     .logo-sec {
     padding-top: 410%;
