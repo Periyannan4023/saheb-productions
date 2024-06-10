@@ -747,7 +747,7 @@ hr {
         width: 90%;
     }
     .alt-send-button{
-        width: 200px;
+        width: 170px;
     }
     .direct-contact-container{
         max-width: 100%;
@@ -755,6 +755,8 @@ hr {
     .direct-contact-container .contact-text{
         font-size: 25px;
     }
-
+    .send-button{
+        width: 200px;
+    }
 
 }
